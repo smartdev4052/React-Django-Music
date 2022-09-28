@@ -1,0 +1,18 @@
+# Config file for automatic testing at travis-ci.org
+sudo: false  # http://docs.travis-ci.com/user/migrating-from-legacy/
+language: python
+python:
+  - 3.6
+env:
+  - SECRET_KEY=dumb_secret_key_for_travis
+before_install: yarn install
+install:
+  - pip install -r requirements/dev.txt
+  - yarn run build
+before_script:
+  - cd src
+script:
+  - python manage.py lint
+  - coverage run --source=. manage.py test
+after_script:
+  - coveralls

@@ -1,0 +1,23 @@
+# Everything needed in production
+
+# Django
+Django==2.0.2
+django-braces==1.12.0
+djangorestframework~=3.7.7
+django-autoslug-iplweb~=1.9.4.dev0
+
+# Database
+dj-database-url==0.4.2
+psycopg2-binary~=2.7.4
+
+# Forms
+django-crispy-forms==1.7.0
+django-taggit==0.22.2
+taggit-selectize==2.4.0
+easy-thumbnails==2.5
+Pillow==5.0.0
+
+# Auth
+django-allauth==0.35.0
+
+python-decouple~=3.1
